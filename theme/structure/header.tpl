@@ -10,11 +10,11 @@
                 <div class="Right">
                     {if $ch_lang}
                         {foreach from=$ch_lang key=key_lang item=one_lang}
-                            {if $one_lang.path}
+                            {if isset($one_lang.path)}
                                 <a href="{$one_lang.path}">
                             {/if}
                             {$one_lang.name}
-                            {if $one_lang.path}
+                            {if isset($one_lang.path)}
                                 </a>
                             {/if}
                         {/foreach}

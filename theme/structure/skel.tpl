@@ -9,7 +9,7 @@
         <link href="/design/css/css.css" rel="stylesheet" type="text/css" />
         {if $ch_lang}
             {foreach from=$ch_lang key=key_lang item=one_lang}
-                {if $one_lang.path}
+                {if isset($one_lang.path)}
                     <link rel="alternate" href="{$domain}{$one_lang.path}" hreflang="{$key_lang|lower}" />
                 {/if}
             {/foreach}
