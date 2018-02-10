@@ -1,9 +1,10 @@
 <?php
 define('APP_ROOT', realpath(dirname(__FILE__)) . '/');
-define('CMS_CORE', '/home/imscore/ims_files/');
+
+define('APP_CORE', '../../');
 
 try{
-    require_once(CMS_CORE . 'cms1/cms.php');
+    require_once(APP_CORE . 'cms-v1/cms.php');
 
     FM::includer(APP_ROOT . 'resources/constants.php');
     FM::includer(APP_RESOURCES . 'registry.php');
