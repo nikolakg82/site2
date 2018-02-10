@@ -1,0 +1,34 @@
+body{padding:0;margin:0;font-size:13px;font-family:Verdana,sans-serif;background:#fff;color:#000;}
+a, a:visited{text-decoration:none;color:#d91c20;}
+a:hover{text-decoration:none;color:#000;}
+h1, h2, h3, h4, h5{font-family:Verdana,sans-serif;padding:0;margin:0;}
+/**** MAIN ****/
+.SiteWidth{width:1170px;}
+.Auto{margin:0 auto;}
+.Table{display:table;}
+.TableRow{display:table-row;}
+.TableCell{display:table-cell;}
+.Center{text-align:center;}
+.Middle{vertical-align:middle;}
+.Top{vertical-align:top;}
+.Left{float:left;}
+.Right{float:right;}
+.Clear{clear:both;}
+.Hidden{overflow:hidden;}
+.Full{width:100%;}
+.Picture img{display:block;max-width:100%;}
+.Transition{-webkit-transition:all 0.5s ease-in;-moz-transition:all 0.5s ease-in;-ms-transition:all 0.5s ease-in;-o-transition:all 0.5s ease-in;transition:all 0.5s ease-in;}
+/**** GENERAL ****/
+.SiteContent{padding:25px 0;}
+.CellContainer{}
+.CellContainer .LeftCell, .CellContainer .RightCell{width:15%;}
+.LeftCell .Content{padding-right:10px;}
+.RightCell .Content{padding-left:10px;}
+/**** HEADER ****/
+.Header{background:#333;}
+.HeaderTop{background:#fff;padding:10px 0;}
+.HeaderMiddle .Content{height:100px;}
+/**** FOOTER ****/
+.Footer{background:#333;color:#fff;padding:15px 0;}
+/**** INDEX ****/
+.IndexData{padding:20px 0;background:#f1f1f1;}

@@ -1,0 +1,15 @@
+
+	
+	RewriteEngine on
+
+	RewriteBase /
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+
+	RewriteRule ^([^/]+)\/(.+)\.(.+)$		?controller=$1&path=$2&view=$3 [L,QSA]
+	RewriteRule ^([^/]+)\/(.+)\/$			?controller=$1&path=$2 [L,QSA]
+	RewriteRule ^([^/]+)\/$					?controller=$1 [L,QSA]
+	RewriteRule ^([^/]+)\.html$				?controller=$1&view=$2 [L,QSA]
+
+	RewriteRule ^index.html$ / [L]
+	
