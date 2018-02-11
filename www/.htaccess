@@ -8,8 +8,10 @@
 
 	RewriteRule ^([^/]+)\/(.+)\.(.+)$		?controller=$1&path=$2&view=$3 [L,QSA]
 	RewriteRule ^([^/]+)\/(.+)\/$			?controller=$1&path=$2 [L,QSA]
+	RewriteRule ^([^/]+)\.html$				?controller=$1&view=html [L,QSA]
+	RewriteRule ^([^/]+)\.json$				?controller=$1&view=json [L,QSA]
+	RewriteRule ^([^/]+)\.xml$				?controller=$1&view=xml [L,QSA]
 	RewriteRule ^([^/]+)\/$					?controller=$1 [L,QSA]
-	RewriteRule ^([^/]+)\.html$				?controller=$1&view=$2 [L,QSA]
 
 	RewriteRule ^index.html$ / [L]
 	
