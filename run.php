@@ -1,4 +1,7 @@
 <?php
+
+use fm\FM, fm\lib\help\Floader;
+
 define('APP_ROOT', realpath(dirname(__FILE__)) . '/');
 
 define('APP_CORE', '../../');
@@ -13,7 +16,7 @@ try{
     CMS::set_db(APP_CONFIG . 'db.php');
 //    CMS::set_admin_theme(APP_THEME);
 
-    $objApp = Floader::load('Astart');
+    $objApp = Floader::load('AppStart');
     $objApp->run();
 
 

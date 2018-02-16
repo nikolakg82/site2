@@ -1,5 +1,7 @@
 <?php
 
+use fm\lib\help\Floader;
+
 /**
  * Staticne klase
  */
@@ -12,7 +14,7 @@
 /**
  * Public klase
  */
-Floader::add_class('Astart',            APP_PUBLIC . 'astart.php',         'public',      'Cstart');
+Floader::add_class('AppStart',            APP_PUBLIC . 'AppStart.php',         'public',      'CmsStart');
 
 /**
  * Registrovanje jezika
@@ -26,9 +28,9 @@ Clang::set_default(CMS_SR);
 /**
  * Registrovanje kontrolera
  */
-CregistryController::add_controller(CMS_C_INDEX, APP_MVC);
+//CregistryController::add_controller(CMS_C_INDEX, APP_MVC);
 CregistryController::add_controller(CMS_C_NEWS, APP_MVC);
-CregistryController::add_controller(CMS_C_ADMIN, APP_MVC);
+//CregistryController::add_controller(CMS_C_ADMIN, APP_MVC);
 
 CregistryController::add_langs();
 CregistryController::add_tables();
