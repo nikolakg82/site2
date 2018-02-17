@@ -1,6 +1,6 @@
 <?php
 
-use fm\FM, fm\lib\help\Floader;
+use fm\FM, fm\lib\help\ClassLoader;
 
 define('APP_ROOT', realpath(dirname(__FILE__)) . '/');
 
@@ -11,12 +11,12 @@ try{
 
     FM::includer(APP_ROOT . 'resources/constants.php');
     FM::includer(APP_RESOURCES . 'registry.php');
-    Floader::load_static_class();
+    ClassLoader::loadStaticClass();
 
     CMS::set_db(APP_CONFIG . 'db.php');
 //    CMS::set_admin_theme(APP_THEME);
 
-    $objApp = Floader::load('AppStart');
+    $objApp = ClassLoader::load('AppStart');
     $objApp->run();
 
 

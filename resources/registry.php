@@ -1,6 +1,6 @@
 <?php
 
-use fm\lib\help\Floader;
+use fm\lib\help\ClassLoader;
 
 /**
  * Staticne klase
@@ -14,7 +14,7 @@ use fm\lib\help\Floader;
 /**
  * Public klase
  */
-Floader::add_class('AppStart',            APP_PUBLIC . 'AppStart.php',         'public',      'CmsStart');
+ClassLoader::addClass('AppStart',            APP_PUBLIC . 'AppStart.php',         'public',      'CmsStart');
 
 /**
  * Registrovanje jezika
