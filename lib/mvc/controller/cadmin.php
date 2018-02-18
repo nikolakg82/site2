@@ -15,8 +15,8 @@ class Cadmin extends Ccadmin
                 {
                     foreach($arrChapterData['tables'] as $strController)
                     {
-                        if(FM::is_variable(CregistryController::get_controllers($strController)) && isset(self::$controllers[$strController]))
-                            CregistryAdmin::add_controller($strChapterName, $arrChapterData['icon'], $strController, self::$controllers[$strController]);
+                        if(FM::is_variable(ControllerLoader::get_controllers($strController)) && isset(self::$controllers[$strController]))
+                            RegistryAdmin::addController($strChapterName, $arrChapterData['icon'], $strController, self::$controllers[$strController]);
                     }
                 }
             }

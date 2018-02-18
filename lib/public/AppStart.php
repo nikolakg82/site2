@@ -1,6 +1,6 @@
 <?php
 
-class AppStart extends CmsStart
+class AppStart extends \cms\lib\abstracts\CmsStart
 {
 
 }

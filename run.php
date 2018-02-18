@@ -1,6 +1,6 @@
 <?php
 
-use fm\FM, fm\lib\help\ClassLoader;
+use fm\FM, fm\lib\help\ClassLoader, cms\CMS;
 
 define('APP_ROOT', realpath(dirname(__FILE__)) . '/');
 
@@ -13,7 +13,7 @@ try{
     FM::includer(APP_RESOURCES . 'registry.php');
     ClassLoader::loadStaticClass();
 
-    CMS::set_db(APP_CONFIG . 'db.php');
+    CMS::setDatabase(APP_CONFIG . 'db.php');
 //    CMS::set_admin_theme(APP_THEME);
 
     $objApp = ClassLoader::load('AppStart');
