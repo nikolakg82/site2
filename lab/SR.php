@@ -5,7 +5,7 @@ return array(
     'word_002'   => 'Vesti',
     'word_003'   => 'Najnovije vesti',
     'word_004'   => 'Kategorije vesti',
-    'word_005'   => '',
+    'word_005'   => 'Nema vesti',
     'word_006'   => '',
     'word_007'   => '',
     'word_008'   => '',

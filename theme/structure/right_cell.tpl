@@ -3,8 +3,7 @@
         <div class="Content">
             {block name=right_cell_news_category}
                 {php}
-                    //$objController = CregistryController::load(CMS_C_NEWS);
-                    //$objController->get_view()->box_category();
+                    cms\lib\help\ControllerLoader::load(CMS_C_NEWS)->boxCategories();
                 {/php}
             {/block}
         </div>
