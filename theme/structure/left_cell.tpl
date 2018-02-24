@@ -3,8 +3,7 @@
         <div class="Content">
             {block name=left_cell_news}
                 {php}
-                    //$objController = CregistryController::load(CMS_C_NEWS);
-                    //$objController->get_view()->box_news();
+                    cms\lib\help\ControllerLoader::load(CMS_C_NEWS)->boxLatestNews();
                 {/php}
             {/block}
         </div>

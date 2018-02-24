@@ -27,7 +27,7 @@
             <div class="SiteWidth Auto">
                 <div class="Left">
                     <div class="TableCell Middle Content Picture">
-                        <a href="/{if $controllers.index}{$controllers.index}.html{/if}"><img src="/design/images/ims-groups-logo.png" /></a>
+                        <a href="/{if $controllers.index}{$controllers.index}.html{/if}">MSD</a>
                     </div>
                 </div>
                 <div class="Right">
