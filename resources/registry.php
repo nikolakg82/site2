@@ -1,6 +1,6 @@
 <?php
 
-use fm\lib\help\ClassLoader, \cms\lib\help\Lang, cms\lib\help\ControllerLoader, cms\CMS;
+use fm\lib\help\ClassLoader, \cms\lib\help\Lang, cms\lib\help\ControllerLoader, cms\CMS, fm\lib\help\Router;
 
 /**
  * Staticne klase
@@ -31,6 +31,9 @@ Lang::setDefault(CMS_SR);
 ControllerLoader::addController(CMS_C_INDEX, APP_MVC, 'cms\lib\mvc\controller\Controller' . ucfirst(CMS_C_INDEX), 'cms\lib\mvc\model\Model' . ucfirst(CMS_C_INDEX));
 ControllerLoader::addController(CMS_C_NEWS, APP_MVC, 'cms\lib\mvc\controller\Controller' . ucfirst(CMS_C_NEWS), 'cms\lib\mvc\model\Model' . ucfirst(CMS_C_NEWS));
 //CregistryController::add_controller(CMS_C_ADMIN, APP_MVC);
+
+Router::addRoute(CMS_C_NEWS, '/', 'index', FM_GET);
+Router::addRoute(CMS_C_NEWS, '/', 'create', FM_POST);
 
 ControllerLoader::addLang();
 ControllerLoader::addTables();
