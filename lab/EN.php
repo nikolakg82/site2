@@ -5,7 +5,7 @@ return array(
     'word_002'   => 'News',
     'word_003'   => 'New news',
     'word_004'   => 'News category',
-    'word_005'   => '',
+    'word_005'   => 'No news',
     'word_006'   => '',
     'word_007'   => '',
     'word_008'   => '',
