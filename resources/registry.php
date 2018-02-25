@@ -32,8 +32,17 @@ ControllerLoader::addController(CMS_C_INDEX, APP_MVC, 'cms\lib\mvc\controller\Co
 ControllerLoader::addController(CMS_C_NEWS, APP_MVC, 'cms\lib\mvc\controller\Controller' . ucfirst(CMS_C_NEWS), 'cms\lib\mvc\model\Model' . ucfirst(CMS_C_NEWS));
 //CregistryController::add_controller(CMS_C_ADMIN, APP_MVC);
 
+Router::addRoute(CMS_C_INDEX, '/', 'run', FM_GET);
+
 Router::addRoute(CMS_C_NEWS, '/', 'index', FM_GET);
 Router::addRoute(CMS_C_NEWS, '/', 'create', FM_POST);
+Router::addRoute(CMS_C_NEWS, '/categories', 'categoryList', FM_GET);
+Router::addRoute(CMS_C_NEWS, '/categories', 'categoryCreate', FM_POST);
+Router::addRoute(CMS_C_NEWS, '/categories/{id|' . FM_INTEGER . '}', 'categoryUpdate', FM_PUT);
+Router::addRoute(CMS_C_NEWS, '/categories/{id|' . FM_INTEGER . '}', 'categoryDelete', FM_DELETE);
+Router::addRoute(CMS_C_NEWS, '/news/{id|' . FM_INTEGER . '}', 'newsUpdate', FM_PUT);
+Router::addRoute(CMS_C_NEWS, '/news/{id|' . FM_INTEGER . '}', 'newsDelete', FM_DELETE);
+Router::addRoute(CMS_C_NEWS, '/{path}/{path?}', 'run', FM_GET);
 
 ControllerLoader::addLang();
 ControllerLoader::addTables();
