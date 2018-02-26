@@ -38,11 +38,11 @@ Router::addRoute(CMS_C_NEWS, '/', 'index', FM_GET);
 Router::addRoute(CMS_C_NEWS, '/', 'create', FM_POST);
 Router::addRoute(CMS_C_NEWS, '/categories', 'categoryList', FM_GET);
 Router::addRoute(CMS_C_NEWS, '/categories', 'categoryCreate', FM_POST);
-Router::addRoute(CMS_C_NEWS, '/categories/{id|' . FM_INTEGER . '}', 'categoryUpdate', FM_PUT);
-Router::addRoute(CMS_C_NEWS, '/categories/{id|' . FM_INTEGER . '}', 'categoryDelete', FM_DELETE);
-Router::addRoute(CMS_C_NEWS, '/news/{id|' . FM_INTEGER . '}', 'newsUpdate', FM_PUT);
-Router::addRoute(CMS_C_NEWS, '/news/{id|' . FM_INTEGER . '}', 'newsDelete', FM_DELETE);
-Router::addRoute(CMS_C_NEWS, '/{path}/{path?}', 'run', FM_GET);
+Router::addRoute(CMS_C_NEWS, '/categories/{id|' . FM_INTEGER . '|' . FM_REQUIRED . '}', 'categoryUpdate', FM_PUT);
+Router::addRoute(CMS_C_NEWS, '/categories/{id|' . FM_INTEGER . '|' . FM_REQUIRED . '}', 'categoryDelete', FM_DELETE);
+Router::addRoute(CMS_C_NEWS, '/news/{id|' . FM_INTEGER . '|' . FM_REQUIRED . '}', 'newsUpdate', FM_PUT);
+Router::addRoute(CMS_C_NEWS, '/news/{id|' . FM_INTEGER . '|' . FM_REQUIRED . '}', 'newsDelete', FM_DELETE);
+Router::addRoute(CMS_C_NEWS, '/{path|' . FM_REQUIRED . '}/{path}', 'run', FM_GET);
 
 ControllerLoader::addLang();
 ControllerLoader::addTables();
