@@ -34,15 +34,15 @@ ControllerLoader::addController(CMS_C_NEWS, APP_MVC, 'cms\lib\mvc\controller\Con
 
 Router::addRoute(CMS_C_INDEX, '/', 'run', FM_GET);
 
-//Router::addRoute(CMS_C_NEWS, '/{view|' . FM_REQUIRED . '|values:' . FM_JSON . ':' . FM_HTML . '}', 'index', FM_GET);
-//Router::addRoute(CMS_C_NEWS, '/{view|' . FM_REQUIRED . '|values:' . FM_JSON . '}', 'create', FM_POST);
-//Router::addRoute(CMS_C_NEWS, '/categories/{view|' . FM_REQUIRED . '|values:.' . FM_JSON . '}', 'categoryList', FM_GET);
-//Router::addRoute(CMS_C_NEWS, '/categories/{view|' . FM_REQUIRED . '|values:.' . FM_JSON . '}', 'categoryCreate', FM_POST);
-//Router::addRoute(CMS_C_NEWS, '/categories/{id|' . FM_INTEGER . '|' . FM_REQUIRED . '}/{view|' . FM_REQUIRED . '|values:.' . FM_JSON . '}', 'categoryUpdate', FM_PUT);
-//Router::addRoute(CMS_C_NEWS, '/categories/{id|' . FM_INTEGER . '|' . FM_REQUIRED . '}/{view|' . FM_REQUIRED . '|values:.' . FM_JSON . '}', 'categoryDelete', FM_DELETE);
-//Router::addRoute(CMS_C_NEWS, '/news/{id|' . FM_INTEGER . '|' . FM_REQUIRED . '}/{view|' . FM_REQUIRED . '|values:.' . FM_JSON . '}', 'newsUpdate', FM_PUT);
-//Router::addRoute(CMS_C_NEWS, '/news/{id|' . FM_INTEGER . '|' . FM_REQUIRED . '}/{view|' . FM_REQUIRED . '|values:.' . FM_JSON . '}', 'newsDelete', FM_DELETE);
-Router::addRoute(CMS_C_NEWS, '/{path|' . FM_REQUIRED . '}/{path}/{view|' . FM_REQUIRED . '|values:' . FM_JSON . ':' . FM_HTML . '}', 'run', FM_GET);
+Router::addRoute(CMS_C_NEWS, '/.{view|' . FM_REQUIRED . '|values:' . FM_JSON . ':' . FM_HTML . '}', 'index', FM_GET);
+Router::addRoute(CMS_C_NEWS, '/.{view|' . FM_REQUIRED . '|values:' . FM_JSON . '}', 'create', FM_POST);
+Router::addRoute(CMS_C_NEWS, '/categories.{view|' . FM_REQUIRED . '|values:' . FM_JSON . '}', 'categoryList', FM_GET);
+Router::addRoute(CMS_C_NEWS, '/categories.{view|' . FM_REQUIRED . '|values:' . FM_JSON . '}', 'categoryCreate', FM_POST);
+Router::addRoute(CMS_C_NEWS, '/categories/{id|' . FM_INTEGER . '|' . FM_REQUIRED . '}.{view|' . FM_REQUIRED . '|values:' . FM_JSON . '}', 'categoryUpdate', FM_PUT);
+Router::addRoute(CMS_C_NEWS, '/categories/{id|' . FM_INTEGER . '|' . FM_REQUIRED . '}.{view|' . FM_REQUIRED . '|values:' . FM_JSON . '}', 'categoryDelete', FM_DELETE);
+Router::addRoute(CMS_C_NEWS, '/news/{id|' . FM_INTEGER . '|' . FM_REQUIRED . '}.{view|' . FM_REQUIRED . '|values:' . FM_JSON . '}', 'newsUpdate', FM_PUT);
+Router::addRoute(CMS_C_NEWS, '/news/{id|' . FM_INTEGER . '|' . FM_REQUIRED . '}.{view|' . FM_REQUIRED . '|values:' . FM_JSON . '}', 'newsDelete', FM_DELETE);
+Router::addRoute(CMS_C_NEWS, '/{path|' . FM_REQUIRED . '}/{path}.{view|' . FM_REQUIRED . '|values:' . FM_JSON . ':' . FM_HTML . '}', 'run', FM_GET);
 
 ControllerLoader::addLang();
 ControllerLoader::addTables();
