@@ -13,6 +13,7 @@
     define('APP_MVC',               APP_LIB         . 'mvc/');
 
     define('APP_RESOURCES',         APP_ROOT        . 'resources/');
+    define('APP_ROUTES',             APP_RESOURCES   . "routes/");
 
     define('APP_CONFIG',            APP_ROOT        . 'config/');
     define('APP_CONFIG_ADMIN',      APP_CONFIG      . 'admin/');
