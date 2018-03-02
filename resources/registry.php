@@ -1,6 +1,6 @@
 <?php
 
-use fm\lib\help\ClassLoader, \cms\lib\help\Lang, cms\lib\help\ControllerLoader, cms\CMS;
+use fm\lib\help\ClassLoader, \cms\lib\help\Lang, cms\lib\help\ControllerLoader, cms\CMS, fm\lib\help\Router;
 
 /**
  * Staticne klase
