@@ -16,7 +16,8 @@ Router::addRoute(
     CMS_C_NEWS,
     '/categories.{view|' . FM_REQUIRED . '|values:' . FM_JSON . '}',
     'categoryList',
-    FM_GET);
+    FM_GET,
+    CMS_ADMIN);
 Router::addRoute(
     CMS_C_NEWS,
     '/categories.{view|' . FM_REQUIRED . '|values:' . FM_JSON . '}',

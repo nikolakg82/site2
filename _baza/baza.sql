@@ -109,3 +109,18 @@ PRIMARY KEY (`id`, `sid`)
 ENGINE=InnoDB
 DEFAULT CHARACTER SET=utf8 COLLATE=utf8_general_ci
 ;
+
+CREATE TABLE `app_users` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `permission` int(10) unsigned NOT NULL,
+  `token` varchar(255) NOT NULL,
+  `token_expire_time` int(10) unsigned NOT NULL DEFAULT '0',
+  `created_date` int(10) unsigned NOT NULL DEFAULT '0',
+  `confirmed_date` int(10) unsigned NOT NULL DEFAULT '0',
+  `last_login_date` int(10) unsigned NOT NULL DEFAULT '0',
+  `active` enum('y','n') NOT NULL DEFAULT 'n',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uniq_email` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
