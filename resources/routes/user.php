@@ -14,3 +14,10 @@ Router::addRoute(
     'logout',
     FM_GET,
     CMS_USER | CMS_ADMIN);
+
+Router::addRoute(
+    CMS_C_USER,
+    '/get-admin-user.{view|' . FM_REQUIRED . '|values:' . FM_JSON . '}',
+    'getAdminUser',
+    FM_GET,
+    CMS_ADMIN);

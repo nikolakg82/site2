@@ -3,6 +3,10 @@
 import Vue from 'vue'
 import App from './components/App.vue'
 import router from './router'
+import VueResource from 'vue-resource'
+
+//VueResource.$http.headers.common['Access-Control-Allow-Origin'] = true;
+Vue.use(VueResource);
 
 Vue.config.productionTip = false
 
