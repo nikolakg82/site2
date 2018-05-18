@@ -8,6 +8,7 @@ import VueResource from 'vue-resource'
 //VueResource.$http.headers.common['Access-Control-Allow-Origin'] = true;
 Vue.use(VueResource);
 
+Vue.http.options.root = 'http://site2.msd.loc';
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
