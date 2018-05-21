@@ -11,17 +11,21 @@
 <script>
     export default {
         created(){
-            this.$http.headers.common.token = '1234';
-            this.$http.headers.common.user_id = '1';
+
             this.$http.get('/user/get-admin-user.json', {
                 before(request) {
                     console.log(request);
+                },
+                headers: {
+                    token: '1234',
+                    user: '1',
                 }
 
             }).then(response => {
-                console.log('aa');
+                console.log('bb');
             }, response => {
-                this.$router.push('login')
+                console.log(response);
+                this.$router.push('login');
             });
         }
     }
