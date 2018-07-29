@@ -4,17 +4,18 @@ import Vue from 'vue'
 import App from './components/App.vue'
 import router from './router'
 import VueResource from 'vue-resource'
-import store from './store/store'
+// import store from './store/store'
 
 //VueResource.$http.headers.common['Access-Control-Allow-Origin'] = true;
 Vue.use(VueResource);
+Vue.http.options.root = 'http://site2.msd.loc';
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
-  store,
+  // store,
   components: { App },
   template: '<App/>'
 })

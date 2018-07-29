@@ -12,20 +12,21 @@
     export default {
         created(){
 
-            this.$http.get('/user/get-admin-user.json', {
+            this.$http.get('http://site2.msd.loc/user/get-admin-user.json', {
                 before(request) {
                     console.log(request);
                 },
                 headers: {
                     token: '1234',
                     user: '1',
+                    Accept: 'application/json, text/plain, */*'
                 }
 
             }).then(response => {
                 console.log('bb');
             }, response => {
-                console.log(response);
-                this.$router.push('login');
+                // console.log(response);
+                // this.$router.push('login');
             });
         }
     }

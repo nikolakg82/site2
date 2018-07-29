@@ -1,3 +1,4 @@
+.idea/
 /cache/smarty/cache
 /cache/smarty/compile
 /config/db.php
