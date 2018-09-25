@@ -1,10 +1,20 @@
 <?php
+
 /**
- * Ovde se definisu konstante vezane za APP
+ * @copyright Copyright (c) 2005-2018 MSD - All Rights Reserved
+ * @link http://www.nikolamilenkovic.com
+ * @email info@nikolamilenkovic.com
+ * @author Nikola Milenkovic info@nikolamilenkovic.com dzoni82.kg@gmail.com http://www.nikolamilenkovic.com
+ * Date: 5/3/2016
+ * Time: 2:16 PM
  */
 
 /**
- * Putanje do foldera
+ * Define constants for app
+ */
+
+/**
+ * path to folder
  */
     define('APP_LIB',               APP_ROOT        . 'lib/');
     define('APP_ABSTRACT',          APP_LIB         . 'abstract/');
@@ -13,6 +23,7 @@
     define('APP_MVC',               APP_LIB         . 'mvc/');
 
     define('APP_RESOURCES',         APP_ROOT        . 'resources/');
+    define('APP_ROUTES',             APP_RESOURCES   . "routes/");
 
     define('APP_CONFIG',            APP_ROOT        . 'config/');
     define('APP_CONFIG_ADMIN',      APP_CONFIG      . 'admin/');
@@ -27,6 +38,6 @@
     define('APP_LAB',               APP_ROOT        . 'lab/');
 
 /**
- * Prefix tabela baze
+ * Database prefix
  */
     define('APP_DB_PREFIX',         'app_');

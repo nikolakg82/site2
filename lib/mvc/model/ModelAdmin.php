@@ -9,9 +9,9 @@
  * Time: 2:16 PM
  */
 
-namespace app\lib\mvc\controller;
+namespace app\lib\mvc\model;
 
-class ControllerIndex extends \cms\lib\mvc\controller\ControllerIndex
+class ModelAdmin extends \cms\lib\mvc\model\ModelAdmin
 {
 
 }

@@ -1,1 +1,1 @@
-Test sa sajta
+<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>admin</title></head><body><div id=app></div><script type=text/javascript src=/admin/asset/static/js/manifest.d3c25650632caab95f07.js></script><script type=text/javascript src=/admin/asset/static/js/vendor.20b3f21047f016727270.js></script><script type=text/javascript src=/admin/asset/static/js/app.309b18130edf83085742.js></script></body></html>

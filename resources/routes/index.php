@@ -9,9 +9,10 @@
  * Time: 2:16 PM
  */
 
-namespace app\lib\mvc\controller;
+use fm\lib\help\Router;
 
-class ControllerIndex extends \cms\lib\mvc\controller\ControllerIndex
-{
-
-}
+Router::addRoute(
+    CMS_C_INDEX,
+    '/',
+    'run',
+    FM_GET);
