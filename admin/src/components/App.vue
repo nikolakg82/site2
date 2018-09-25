@@ -12,7 +12,7 @@
     export default {
         created(){
 
-            this.$http.get('http://site2.msd.loc/user/get-admin-user.json', {
+            this.$http.jsonp('http://site2.msd.loc/user/get-admin-user.json', {
                 before(request) {
                     console.log(request);
                 },
@@ -25,7 +25,7 @@
             }).then(response => {
                 console.log('bb');
             }, response => {
-                // console.log(response);
+                console.log(response);
                 // this.$router.push('login');
             });
         }
