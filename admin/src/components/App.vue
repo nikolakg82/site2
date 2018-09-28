@@ -12,9 +12,9 @@
     export default {
         created(){
 
-            this.$http.jsonp('http://site2.msd.loc/user/get-admin-user.json', {
+            this.$http.get('http://site2.msd.loc/user/get-admin-user.json', {
                 before(request) {
-                    console.log(request);
+//                    console.log(request);
                 },
                 headers: {
                     token: '1234',
@@ -23,7 +23,7 @@
                 }
 
             }).then(response => {
-                console.log('bb');
+                console.log(response);
             }, response => {
                 console.log(response);
                 // this.$router.push('login');

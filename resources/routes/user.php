@@ -29,4 +29,4 @@ Router::addRoute(
     '/get-admin-user.{view|' . FM_REQUIRED . '|values:' . FM_JSON . '}',
     'getAdminUser',
     FM_GET,
-    CMS_GUEST | CMS_ADMIN);
+    CMS_ADMIN);
