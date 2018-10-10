@@ -4,30 +4,62 @@
             Header
         </div>
         <div>
-            <router-view/>
+            <div>
+                <left-menu></left-menu>
+            </div>
+            <div>
+                <router-view/>
+            </div>
         </div>
     </div>
 </template>
 <script>
+    import LeftMenu from '@/components/common/LeftMenu.vue';
+
     export default {
+        data()
+        {
+            return {
+                credentials: null,
+            }
+        },
         created(){
+            if (localStorage.getItem('credentials'))
+            {
+                this.credentials = JSON.parse(localStorage.getItem('credentials'));
 
-            this.$http.get('http://site2.msd.loc/user/get-admin-user.json', {
-                before(request) {
-//                    console.log(request);
-                },
-                headers: {
-                    token: '1234',
-                    user: '1',
-                    Accept: 'application/json, text/plain, */*'
-                }
+                this.$http.get('/user/get-admin-user.json',{
+                        before(request) {
+                            console.log(request);
+                        },
+                        headers: {
+                            'token': this.credentials.token,
+                            'user': this.credentials.user,
+                            'Accept': 'application/json, text/plain, */*'
+                        }
 
-            }).then(response => {
-                console.log(response);
-            }, response => {
-                console.log(response);
-                // this.$router.push('login');
-            });
+                    }
+                )
+                .then((response) =>
+                {
+                    return response.json();
+                })
+                .then(
+                    data =>
+                    {
+                        //alert("ok");
+                    }
+                )
+                .catch(function (error)
+                {
+                    this.$router.push('login');
+                });
+            }
+            else
+                this.$router.push('login');
+        },
+        components: {
+            'left-menu': LeftMenu,
         }
     }
 </script>

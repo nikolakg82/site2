@@ -8,6 +8,12 @@ const Login = resolve => {
 });
 };
 
+const News = resolve => {
+    require.ensure(['@/components/news/List.vue'], () => {
+        resolve(require('@/components/news/List.vue'));
+});
+};
+
 Vue.use(Router)
 
 export default new Router({
@@ -21,6 +27,11 @@ export default new Router({
       path: '/login',
       name: 'login',
       component: Login
+    },
+    {
+        path: '/news',
+        name: 'news',
+        component: News
     }
   ]
 })
