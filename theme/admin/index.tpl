@@ -1,1 +1,1 @@
-<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>admin</title></head><body><div id=app></div><script type=text/javascript src=/admin/asset/static/js/manifest.a196e0a9ccdd17e22f45.js></script><script type=text/javascript src=/admin/asset/static/js/vendor.4575eaa436e838d1b95e.js></script><script type=text/javascript src=/admin/asset/static/js/app.e2a3adf0daed42029d06.js></script></body></html>
+Test

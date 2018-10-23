@@ -5,7 +5,12 @@
         <div class="HeaderTop">
             <div class="SiteWidth Auto">
                 <div class="Left">
-
+                    {if isset($user)}
+                        <a href="/{$controllers.user}/logout.html">Logout</a>
+                        {if $user.permission == CMS_ADMIN}
+                            <a href="/{$controllers.admin}.html">Admin</a>
+                        {/if}
+                    {/if}
                 </div>
                 <div class="Right">
                     {if $ch_lang}

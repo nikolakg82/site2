@@ -15,7 +15,8 @@ Router::addRoute(
     CMS_C_ADMIN,
     '/.{view|' . FM_REQUIRED . '|values:' . FM_HTML . '}',
     'index',
-    FM_GET);
+    FM_GET,
+    CMS_ADMIN);
 
 Router::addRoute(
     CMS_C_ADMIN,

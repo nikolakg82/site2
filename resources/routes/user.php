@@ -13,13 +13,19 @@ use fm\lib\help\Router;
 
 Router::addRoute(
     CMS_C_USER,
-    '/login.{view|' . FM_REQUIRED . '|values:' . FM_JSON . '}',
+    '/.{view|' . FM_REQUIRED . '|values:' . FM_HTML . '}',
+    'index',
+    FM_GET);
+
+Router::addRoute(
+    CMS_C_USER,
+    '/login.{view|' . FM_REQUIRED . '|values:' . FM_JSON . ':' . FM_HTML . '}',
     'login',
     FM_POST);
 
 Router::addRoute(
     CMS_C_USER,
-    '/logout.{view|' . FM_REQUIRED . '|values:' . FM_JSON . '}',
+    '/logout.{view|' . FM_REQUIRED . '|values:' . FM_JSON . ':' . FM_HTML . '}',
     'logout',
     FM_GET,
     CMS_USER | CMS_ADMIN);
